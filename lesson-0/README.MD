@@ -71,7 +71,9 @@ Kodo.prototype.init.prototype = Kodo.prototype;
 
 由于我们是return new Kodo.prototype.init,那自然,我们需要手动的把init的prototype指向Kodo的prototype
 
-同时我们在原型上具有splice属性后,我们的对象就会变为了一个类数组对象,神奇吧!
+~~同时我们在原型上具有splice属性后,我们的对象就会变为了一个类数组对象,神奇吧!~~
+
+只要这个对象有`length`属性, 且它的属性值为`number`类型, 这个对象就会变为一个类数组对象
 
 ```javascript
 Kodo.ajax = function() { //直接挂载方法  可f.ajax调用
